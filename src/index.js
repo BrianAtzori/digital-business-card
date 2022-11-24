@@ -1,17 +1,19 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+import "./styles/index.css"
+import React from "react"
+import ReactDOM from "react-dom"
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>
-);
+import HeaderImage from "./components/header-image"
+import HeaderTitles from "./components/header-titles"
+import ContactButtons from "./components/contact-buttons"
 
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
+function DigitalBusinessCard(){
+    return(
+        <div className="digital-business-card">
+            <HeaderImage />
+            <HeaderTitles />
+            <ContactButtons />
+        </div>
+    )
+}
+
+ReactDOM.render(<DigitalBusinessCard />, document.getElementById("root"));
